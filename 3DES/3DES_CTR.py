@@ -14,3 +14,14 @@ def DES3_CTR_decrypt(ciphertext, DES3_key, nonce):
     decrypted_plaintext = DES3_CTR_cipher.decrypt(ciphertext)
 
     return decrypted_plaintext
+
+plaintext = input("Enter plaintext: ").encode()
+DES3_key = DES3.adjust_key_parity(get_random_bytes(24))
+nonce = get_random_bytes(7)
+
+ciphertext = DES3_CTR_encrypt(plaintext, DES3_key, nonce)
+decrypted_plaintext = DES3_CTR_decrypt(ciphertext, DES3_key, nonce)
+
+print("Plaintext:", plaintext.decode())
+print("Ciphertext:", ciphertext.hex())
+print("Decrypted plaintext:", decrypted_plaintext.decode())
