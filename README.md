@@ -2,6 +2,6 @@
 
 ---
 
-<p align="center">Repository for the Pratical Section of Aplied Python Cryptography Course Certificate</p>
+<p align="center">Repository for the Pratical Section of Applied Python Cryptography Course Certificate</p>
 
 ---
